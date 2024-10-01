@@ -14,7 +14,7 @@ body {
   transition: transform 0.3s ease;
   z-index: 9999; /* Ensure the sidebar is always on top */
 }
-.char-container {
+.chart-container {
   background-color: white;
   padding: 20px;
 }
