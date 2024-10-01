@@ -114,3 +114,24 @@ canvas {
 .large-text {
   font-size: 18px;
 }
+.small-text-heading {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(103, 164, 184);
+}
+.transparent-button {
+  background-color: transparent;
+  border: 1px solid purple !important;
+  border-color: purple;
+  color: purple;
+  &:active {
+    background-color: transparent !important;
+  }
+  &:hover {
+    background-color: transparent;
+    color: purple;
+  }
+  &:focus {
+    background-color: transparent;
+  }
+}
