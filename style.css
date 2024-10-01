@@ -108,3 +108,9 @@ canvas {
 .extra-bold-text {
   font-weight: 700; /* or you can use bold if you prefer */
 }
+.normal-bold-text {
+  font-weight: 600; /* or you can use bold if you prefer */
+}
+.large-text {
+  font-size: 18px;
+}
