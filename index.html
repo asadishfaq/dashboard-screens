@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -82,6 +83,14 @@
                 <i class="bi bi-journal-bookmark fs-1"></i>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="mt-2 mb-5">
+          <h2 class="">Sales Data</h2>
+          <div class="graph-container">
+            <!-- Canvas element for Chart.js -->
+            <canvas id="myChart"></canvas>
           </div>
         </div>
 
@@ -203,6 +212,65 @@
 
       toggler.addEventListener("click", () => {
         sidebar.classList.toggle("show-sidebar");
+      });
+    </script>
+    <script>
+      const ctx = document.getElementById("myChart").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "bar", // Type of chart (bar, line, etc.)
+        data: {
+          labels: ["January", "February", "March", "April", "May", "June"], // X-axis labels
+          datasets: [
+            {
+              // No label
+              data: [12000, 15000, 18000, 20000, 22000, 24000], // Y-axis data
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)", // January
+                "rgba(54, 162, 235, 0.2)", // February
+                "rgba(75, 192, 192, 0.2)", // March
+                "rgba(153, 102, 255, 0.2)", // April
+                "rgba(255, 159, 64, 0.2)", // May
+                "rgba(255, 206, 86, 0.2)", // June
+              ],
+              // borderColor: [
+              //   "rgba(255, 99, 132, 1)",
+              //   "rgba(54, 162, 235, 1)",
+              //   "rgba(75, 192, 192, 1)",
+              //   "rgba(153, 102, 255, 1)",
+              //   "rgba(255, 159, 64, 1)",
+              //   "rgba(255, 206, 86, 1)",
+              // ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          plugins: {
+            legend: {
+              display: false, // Hide legend
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true, // Ensures Y-axis starts at 0
+              ticks: {
+                stepSize: 10000, // Increase gap between Y-axis ticks
+              },
+              min: 0, // Set minimum Y-axis value
+              max: 30000, // Set maximum Y-axis value for more space
+            },
+            x: {
+              grid: {
+                display: false, // Remove vertical grid lines
+              },
+              ticks: {
+                padding: 20, // Increase the padding for X-axis labels (more space)
+              },
+              maxBarThickness: 50, // Control the maximum width of the bars (optional)
+              barPercentage: 0.5, // Adjusts the bar size (lower value = more space)
+            },
+          },
+        },
       });
     </script>
   </body>
