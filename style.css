@@ -106,10 +106,10 @@ canvas {
   max-height: 500px;
 }
 .extra-bold-text {
-  font-weight: 700; /* or you can use bold if you prefer */
+  font-weight: 800; /* or you can use bold if you prefer */
 }
 .normal-bold-text {
-  font-weight: 600; /* or you can use bold if you prefer */
+  font-weight: 700; /* or you can use bold if you prefer */
 }
 .large-text {
   font-size: 18px;
@@ -119,6 +119,9 @@ canvas {
   font-weight: bold;
   color: rgb(103, 164, 184);
 }
+.grade-sheet {
+  color: rgb(53, 88, 100);
+}
 .transparent-button {
   background-color: transparent;
   border: 1px solid purple !important;
@@ -126,6 +129,7 @@ canvas {
   color: purple;
   &:active {
     background-color: transparent !important;
+    color: purple;
   }
   &:hover {
     background-color: transparent;
@@ -133,5 +137,10 @@ canvas {
   }
   &:focus {
     background-color: transparent;
+    color: purple !important;
   }
+}
+
+.view-button {
+  color: white;
 }

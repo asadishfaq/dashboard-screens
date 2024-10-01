@@ -103,7 +103,7 @@
         <div class="row mt-4">
           <div class="col-12">
             <div class="d-flex justify-content-between align-items-center mb-3">
-              <h2 class="mb-0">Grade Sheet</h2>
+              <h2 class="mb-0 grade-sheet small-text-heading">Grade Sheet</h2>
               <button class="btn btn-info btn-sm">view details</button>
             </div>
             <table class="table table-bordered">
@@ -116,56 +116,28 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>OOP</td>
+                  <td class="normal-bold-text">OOP</td>
                   <td class="normal-bold-text">2A</td>
-                  <td><button class="btn btn-info btn-sm">View</button></td>
+                  <td>
+                    <button class="btn btn-info btn-sm view-button">
+                      View
+                    </button>
+                  </td>
                 </tr>
                 <tr>
-                  <td>DSA</td>
+                  <td class="normal-bold-text">DSA</td>
                   <td class="normal-bold-text">3B</td>
-                  <td><button class="btn btn-info btn-sm">View</button></td>
+                  <td>
+                    <button class="btn btn-info btn-sm view-button">
+                      View
+                    </button>
+                  </td>
                 </tr>
                 <!-- Add more subjects as necessary -->
               </tbody>
             </table>
           </div>
         </div>
-
-        <!-- Updated section for Questions, Assessments, CLOs, PLOs -->
-        <!-- <div class="row mt-4">
-          <div class="col-md-3">
-            <div class="card text-center">
-              <div class="card-body">
-                <h6>Questions</h6>
-                <button class="btn btn-info btn-sm">View</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card text-center">
-              <div class="card-body">
-                <h6>Assessments</h6>
-                <button class="btn btn-info btn-sm">View</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card text-center">
-              <div class="card-body">
-                <h6>CLOs</h6>
-                <button class="btn btn-info btn-sm">View</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card text-center">
-              <div class="card-body">
-                <h6>PLOs</h6>
-                <button class="btn btn-info btn-sm">View</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
 
         <!-- Responsive layout for 4 sections in the same row -->
         <div class="mt-4">
@@ -176,7 +148,7 @@
                 class="questionSection d-flex justify-content-between align-items-center w-100"
               >
                 <h6 class="mb-0 extra-bold-text large-text">Questions</h6>
-                <button class="btn btn-info btn-sm">View</button>
+                <button class="btn btn-info btn-sm view-button">View</button>
               </div>
             </div>
 
@@ -186,7 +158,7 @@
                 class="questionSection d-flex justify-content-between align-items-center w-100"
               >
                 <h6 class="mb-0 extra-bold-text large-text">Assesments</h6>
-                <button class="btn btn-info btn-sm">View</button>
+                <button class="btn btn-info btn-sm view-button">View</button>
               </div>
             </div>
 
@@ -196,7 +168,7 @@
                 class="questionSection d-flex justify-content-between align-items-center w-100"
               >
                 <h6 class="mb-0 extra-bold-text large-text">CLOs</h6>
-                <button class="btn btn-info btn-sm">View</button>
+                <button class="btn btn-info btn-sm view-button">View</button>
               </div>
             </div>
 
@@ -206,7 +178,7 @@
                 class="questionSection d-flex justify-content-between align-items-center w-100"
               >
                 <h6 class="mb-0 extra-bold-text large-text">PLOs</h6>
-                <button class="btn btn-info btn-sm">View</button>
+                <button class="btn btn-info btn-sm view-button">View</button>
               </div>
             </div>
           </div>
@@ -226,7 +198,7 @@
     <script>
       const ctx = document.getElementById("myChart").getContext("2d");
       const myChart = new Chart(ctx, {
-        type: "bar", // Type of chart (bar, line, etc.)
+        type: "bar",
         data: {
           labels: ["January", "February", "March", "April", "May", "June"], // X-axis labels
           datasets: [
@@ -241,14 +213,6 @@
                 "rgba(255, 159, 64, 0.2)", // May
                 "rgba(255, 206, 86, 0.2)", // June
               ],
-              // borderColor: [
-              //   "rgba(255, 99, 132, 1)",
-              //   "rgba(54, 162, 235, 1)",
-              //   "rgba(75, 192, 192, 1)",
-              //   "rgba(153, 102, 255, 1)",
-              //   "rgba(255, 159, 64, 1)",
-              //   "rgba(255, 206, 86, 1)",
-              // ],
               borderWidth: 1,
             },
           ],
