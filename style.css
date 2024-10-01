@@ -105,3 +105,6 @@ canvas {
   height: 100% !important;
   max-height: 500px;
 }
+.extra-bold-text {
+  font-weight: 700; /* or you can use bold if you prefer */
+}
